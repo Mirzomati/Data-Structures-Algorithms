@@ -2,7 +2,7 @@ public class BigOSingleLoop {
 
     public static void main(String[] args) {
         long numberOfOperations=0;
-        int n=100;// size of Data
+        int n=100000;// size of Data
 
         long startTime;
         long endTime;
@@ -25,12 +25,10 @@ public class BigOSingleLoop {
                 numberOfOperations+=1;
             }
         }
-
         endTime = System.currentTimeMillis();
 
         System.out.println("Number of operation nested Loop: " + numberOfOperations + " in " + (endTime-startTime) + " milliseconds" );
-        numberOfOperations =0;
-
+        numberOfOperations = 0;
         // Task 2 End...................
 // ......................................................................................................
         // Task 3 Three Nested Loops...................
@@ -49,6 +47,12 @@ public class BigOSingleLoop {
         // Task 4.5 End...................
 
         // Task 5 Logarithmic Complexity...................
+        startTime = System.currentTimeMillis();
+        for (int i = 1; i < n; i*=2) {
+            numberOfOperations+=1;
+        }
+        endTime = System.currentTimeMillis();
+        System.out.println("Number of operation Logarithmic: " + numberOfOperations + " in " + (endTime-startTime) + " milliseconds" );
 
         // Task 5 End...................*/
     }
