@@ -24,7 +24,7 @@ public class TwoSumProblem {
 //    Input: nums = [3,3], target = 6
 //    Output: [0,1]
 
-    //brute force
+    //*******brute force********
     public static int[] twoSum(int[] nums, int target) {
 
         int[] result = new int[2];
@@ -38,17 +38,31 @@ public class TwoSumProblem {
                 }
             }
         }
-
         return result;
-
-
     }
+
+    //********faster solution*************
+    public static int[] twoSumFaster(int[] nums, int target) {
+        int[] result = new int[2];
+
+        for (int i = 0; i < nums.length; i++) {
+            if(target - nums[i] <=0 ){
+                continue;
+            }
+            if (target - nums[i] >0){
+                
+            }
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
 
 
 
-        int[] nums = {3,2,4};
-        int target = 6;
+        int[] nums = {2,7,11,15};
+        int target = 9;
         int[] result = twoSum(nums, target);
         System.out.println( Arrays.toString(result));
 
