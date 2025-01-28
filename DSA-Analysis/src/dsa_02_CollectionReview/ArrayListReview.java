@@ -1,9 +1,6 @@
 package dsa_02_CollectionReview;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class ArrayListReview {
 
@@ -30,22 +27,24 @@ public class ArrayListReview {
         Iterator studentIterator = students.listIterator();
         Iterator<Student> studentIterator2 = students.iterator();
 
-        while (studentIterator.hasNext()){
+        while (studentIterator.hasNext()) {
             System.out.println(studentIterator.next());
             System.out.println(studentIterator2.next().getName());
-        };
+        }
+        ;
 
         // Backwards Iteration
         System.out.println("printing backwards with iterator");
 
-        while (((ListIterator<?>) studentIterator).hasPrevious()){
+        while (((ListIterator<?>) studentIterator).hasPrevious()) {
             System.out.println(((ListIterator<?>) studentIterator).previous());
 
-        };
+        }
+        ;
 
         // 3. for each loop
         System.out.println("Printing with for each loop");
-        for (Student student: students) {
+        for (Student student : students) {
             System.out.println(student);
         }
 
@@ -55,7 +54,29 @@ public class ArrayListReview {
 //        students.forEach(System.out::println); shorter way with method reference
 
         // Sorting Elements in List using comparator interface
+        System.out.println("Sorting with comparator interface by id Desc");
+        Collections.sort(students, new sortByIdDesc());
+        students.forEach(student -> System.out.println(student));
 
-        //  implementations of  Comparator
+        System.out.println("Sorting with comparator interface by name Desc ");
+        Collections.sort(students, new sortByNameDesc());
+        students.forEach(student -> System.out.println(student));
     }
+        //  implementations of Comparator
+    static class sortByIdDesc implements Comparator<Student>{
+
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o2.id - o1.id;
+            }
+        }
+
+    static class sortByNameDesc implements Comparator<Student>{
+
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o2.name.compareToIgnoreCase(o1.name);
+        }
+    }
+
 }
