@@ -1,6 +1,7 @@
 package dsa_02_CollectionReview;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListReview {
@@ -24,7 +25,14 @@ public class ArrayListReview {
 
         // 2. Iterator
         // Forward Iteration
+        System.out.println("printing with iterator");
+        Iterator studentIterator = students.listIterator();
+        Iterator<Student> studentIterator2 = students.iterator();
 
+        while (studentIterator.hasNext()){
+            System.out.println(studentIterator.next());
+            System.out.println(studentIterator2.next().getName());
+        };
 
         // Backwards Iteration
 
