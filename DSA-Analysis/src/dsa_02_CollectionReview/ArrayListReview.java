@@ -44,10 +44,15 @@ public class ArrayListReview {
         };
 
         // 3. for each loop
-
+        System.out.println("Printing with for each loop");
+        for (Student student: students) {
+            System.out.println(student);
+        }
 
         // 4. Lambda
-
+        System.out.println("Printing with Lambda");
+        students.forEach(student -> System.out.println(student));
+//        students.forEach(System.out::println); shorter way with method reference
 
         // Sorting Elements in List using comparator interface
 
