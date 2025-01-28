@@ -3,6 +3,7 @@ package dsa_02_CollectionReview;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class ArrayListReview {
 
@@ -35,7 +36,12 @@ public class ArrayListReview {
         };
 
         // Backwards Iteration
+        System.out.println("printing backwards with iterator");
 
+        while (((ListIterator<?>) studentIterator).hasPrevious()){
+            System.out.println(((ListIterator<?>) studentIterator).hasPrevious());
+
+        };
 
         // 3. for each loop
 
