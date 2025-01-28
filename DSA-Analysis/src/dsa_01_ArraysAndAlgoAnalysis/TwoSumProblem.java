@@ -1,3 +1,5 @@
+package dsa_01_ArraysAndAlgoAnalysis;
+
 import javax.management.MBeanAttributeInfo;
 import javax.xml.parsers.SAXParser;
 import java.util.Arrays;
@@ -24,44 +26,33 @@ public class TwoSumProblem {
 //    Input: nums = [3,3], target = 6
 //    Output: [0,1]
 
+
     //*******brute force********
     public static int[] twoSum(int[] nums, int target) {
 
-        int[] result = new int[2];
-
         for (int i = 0; i < nums.length; i++) {
             for (int j = 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    result[0] = i;
-                    result[1] = j;
-                    return result;
+                if(i!=j){
+                    if (nums[i] + nums[j] == target) return new int[]{i,j};
                 }
             }
         }
-        return result;
+        return new int[]{};
     }
 
     //********faster solution*************
-    public static int[] twoSumFaster(int[] nums, int target) {
-        int[] result = new int[2];
-
-        for (int i = 0; i < nums.length; i++) {
-            if(target - nums[i] <=0 ){
-                continue;
-            }
-            if (target - nums[i] >0){
-                
-            }
-        }
-        return result;
-    }
+//    public static int[] twoSumFaster(int[] nums, int target) {
+//
+//
+//        return result;
+//    }
 
 
     public static void main(String[] args) {
 
 
 
-        int[] nums = {2,7,11,15};
+        int[] nums = {4,7,2,9};
         int target = 9;
         int[] result = twoSum(nums, target);
         System.out.println( Arrays.toString(result));

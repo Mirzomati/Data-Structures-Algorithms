@@ -1,8 +1,10 @@
+package dsa_01_ArraysAndAlgoAnalysis;
+
 public class BigOSingleLoop {
 
     public static void main(String[] args) {
         long numberOfOperations=0;
-        int n=10000;// size of Data
+        int n=56;// size of Data
         int m = 500;
 
         long startTime;
