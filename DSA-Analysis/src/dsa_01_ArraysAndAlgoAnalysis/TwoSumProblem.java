@@ -43,19 +43,17 @@ public class TwoSumProblem {
     }
 
     //********faster solution*************
-    public static int[] twoSumFaster(int[] nums, int target) {
+    public static int[] twoSumFaster(int[] array, int targetValue) {
 
         Map<Integer, Integer> map = new HashMap<>();
 
-        for(int i=0; i< nums.length; i++){
-            map.put(nums[i], i);
+        for(int i=0; i< array.length; i++){
+            int potentialMatch = targetValue - array[i];
+            if(map.containsKey(potentialMatch)) return new int[]{i, map.get(potentialMatch)};
+            else map.put(array[i], i);
         }
 
-        for(int i=0; i< nums.length; i++){
-            if(map.containsKey(target - nums[i])) return new int[]{i, map.get(target-nums[i])};
-        }
-
-        return null ;
+        return new int[]{} ;
     }
 
 
