@@ -2,7 +2,9 @@ package dsa_01_ArraysAndAlgoAnalysis;
 
 import javax.management.MBeanAttributeInfo;
 import javax.xml.parsers.SAXParser;
+import java.sql.Array;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -41,11 +43,20 @@ public class TwoSumProblem {
     }
 
     //********faster solution*************
-//    public static int[] twoSumFaster(int[] nums, int target) {
-//
-//
-//        return result;
-//    }
+    public static int[] twoSumFaster(int[] nums, int target) {
+
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int i=0; i< nums.length; i++){
+            map.put(nums[i], i);
+        }
+
+        for(int i=0; i< nums.length; i++){
+            if(map.containsKey(target - nums[i])) return new int[]{i, map.get(target-nums[i])};
+        }
+
+        return null ;
+    }
 
 
     public static void main(String[] args) {
@@ -54,7 +65,7 @@ public class TwoSumProblem {
 
         int[] nums = {4,7,2,9};
         int target = 9;
-        int[] result = twoSum(nums, target);
+        int[] result = twoSumFaster(nums, target);
         System.out.println( Arrays.toString(result));
 
 
