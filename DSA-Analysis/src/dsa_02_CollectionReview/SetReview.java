@@ -16,6 +16,7 @@ public class SetReview {
         set.add(new Student(2, "John"));
         set.add(new Student(3, "Peter"));
         set.add(new Student(4, "Berry"));
+        set.add(new Student(4, "Berry"));
         System.out.println(set.add(new Student(4, "Berry")));
         System.out.println(set);
 
@@ -28,8 +29,9 @@ public class SetReview {
 
 
     public static Character firstRepeatingChar(String str) {
+        // time complexity is O(n)
 
-        Set<Character> chars = new HashSet<>();
+        Set<Character> chars = new HashSet<>(); // in here i have Space Complexity of O(n)
 
         for (Character ch : str.toCharArray()) if (!chars.add(ch)) return ch;
 
