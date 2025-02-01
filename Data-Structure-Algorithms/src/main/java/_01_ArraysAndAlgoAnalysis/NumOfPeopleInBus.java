@@ -1,4 +1,4 @@
-package main.java._01_ArraysAndAlgoAnalysis;
+package _01_ArraysAndAlgoAnalysis;
 
 import java.util.ArrayList;
 

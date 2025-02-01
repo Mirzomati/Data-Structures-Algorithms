@@ -1,4 +1,4 @@
-package main.java._02_CollectionReview;
+package _02_CollectionReview;
 
 import java.util.*;
 
