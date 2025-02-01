@@ -1,8 +1,5 @@
-package dsa_01_ArraysAndAlgoAnalysis;
+package main.java._01_ArraysAndAlgoAnalysis;
 
-import javax.management.MBeanAttributeInfo;
-import javax.xml.parsers.SAXParser;
-import java.sql.Array;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,8 +39,10 @@ public class TwoSumProblem {
         return new int[]{};
     }
 
-    //********faster solution*************
+    //********faster solutioxczasn*************
     public static int[] twoSumFaster(int[] array, int targetValue) {
+
+        //time - O(n), Space - O(n)
 
         Map<Integer, Integer> map = new HashMap<>();
 
@@ -58,8 +57,6 @@ public class TwoSumProblem {
 
 
     public static void main(String[] args) {
-
-
 
         int[] nums = {4,7,2,9};
         int target = 9;

@@ -1,8 +1,7 @@
-package dsa_02_CollectionReview;
+package main.java._02_CollectionReview;
 
 
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 

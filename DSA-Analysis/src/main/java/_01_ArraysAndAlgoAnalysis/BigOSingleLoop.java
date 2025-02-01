@@ -1,4 +1,4 @@
-package dsa_01_ArraysAndAlgoAnalysis;
+package main.java._01_ArraysAndAlgoAnalysis;
 
 public class BigOSingleLoop {
 

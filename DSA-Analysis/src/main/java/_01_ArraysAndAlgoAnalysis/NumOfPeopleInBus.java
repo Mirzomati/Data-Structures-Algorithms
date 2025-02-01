@@ -1,7 +1,6 @@
-package dsa_01_ArraysAndAlgoAnalysis;
+package main.java._01_ArraysAndAlgoAnalysis;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 public class NumOfPeopleInBus {
 
