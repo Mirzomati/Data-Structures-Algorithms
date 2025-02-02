@@ -5,5 +5,6 @@ public class SinglyLinkedListApp {
 
         MySinglyLinkedList mylist = new MySinglyLinkedList();
         System.out.println(mylist.isEmpty());
+
     }
 }
