@@ -18,5 +18,13 @@ public class LinkedListDemo {
         System.out.println("node4's address is: " + node4 + " Node4's next address is " + node4.next);
 
         System.out.println(node1.next.id+ " -id of second node");
+
+        Node current;
+        Node Head = node1;
+        current = Head;
+        while (current != null) {
+            System.out.println("Id of node is: "+ current.id);
+            current = current.next;
+        }
     }
 }
