@@ -137,12 +137,12 @@ public class MySinglyLinkedList {
         Node ptr1=head;
         Node ptr2=head;
         //move ptr2 k-1 times
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k-1; i++) {
             ptr2=ptr2.next;
 
         }
         //move both pointers until ptr2 hits the last element
-        while (ptr2!=null){
+        while (ptr2.next!=null){
             ptr2=ptr2.next;
             ptr1=ptr1.next;
         }
