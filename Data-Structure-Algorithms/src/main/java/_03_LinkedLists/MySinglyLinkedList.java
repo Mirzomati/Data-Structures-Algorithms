@@ -25,6 +25,14 @@ public class MySinglyLinkedList {
 
     }
 
+    void addFirst(int value){
+
+        Node newNode = new Node(value);
+
+        newNode.next = head;
+        head = newNode;
+    }
+
     void deleteById(int id){
         //check if the empty
         if(isEmpty()) System.out.println("list is empty");
