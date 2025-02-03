@@ -59,10 +59,28 @@ public class MySinglyLinkedList {
         }
     }
 
+    int indexOf(int id){
+        if (isEmpty()) return -1;
+
+        Node current = head;
+        int index = 0;
+
+        while (current != null){
+          if(current.id == id) return index;
+
+          current = current.next;
+
+          index++;
+
+        }
+
+        return -1;
+    }
+
     void printNodes(){
         Node current = head;
         while(current != null){
-            if (current.next == null) System.out.print(current.id+"=> null");
+            if (current.next == null) System.out.println(current.id+"=> null");
             else {
                 System.out.print(current.id+ "=>");
             }
