@@ -1,5 +1,8 @@
 package _03_LinkedLists;
 
+import java.util.IllegalFormatCodePointException;
+import java.util.LinkedList;
+
 public class MySinglyLinkedList {
 
     Node head;
@@ -94,6 +97,33 @@ public class MySinglyLinkedList {
             }
             current = current.next;
         }
+    }
+
+    public int getKthFromLast(int k){
+        if (isEmpty() || k == 0) return -1;
+
+        Node current = head;
+        Node fastPointer = current;
+        Node slowPointer = current;
+        int fastIndex = 0;
+        int slowIndex = 0;
+
+        while (current!=null){
+
+            for (int i = 0; i < k; i++) {
+                if(fastPointer.next == null) break;
+                fastPointer = fastPointer.next;
+                fastIndex++;
+            }
+
+            if(fastPointer.next==null && fastIndex-slowIndex==k) return slowPointer.id;
+
+            slowPointer = current.next;
+            slowIndex++;
+
+            current= current.next;
+        }
+        return -1;
     }
 
 
