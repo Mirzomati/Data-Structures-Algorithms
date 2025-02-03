@@ -30,10 +30,15 @@ public class MySinglyLinkedList {
 
     void addFirst(int value){
 
-        Node newNode = new Node(value);
+        Node node = new Node(value);
 
-        newNode.next = head;
-        head = newNode;
+        if (isEmpty()){
+            head=tail=node;
+        }else {
+            node.next = head;
+            head = node;
+        }
+        size++;
     }
 
     void deleteById(int id){
@@ -99,6 +104,7 @@ public class MySinglyLinkedList {
         }
     }
 
+    //worse solution and its k jumps from the last
     public int getKthFromLast(int k){
         if (isEmpty() || k == 0) return -1;
 
@@ -124,6 +130,25 @@ public class MySinglyLinkedList {
             current= current.next;
         }
         return -1;
+    }
+    //better solution
+    public int getKthItemFromLast(int k){
+        //create two pointers
+        Node ptr1=head;
+        Node ptr2=head;
+        //move ptr2 k-1 times
+        for (int i = 0; i < k; i++) {
+            ptr2=ptr2.next;
+
+        }
+        //move both pointers until ptr2 hits the last element
+        while (ptr2!=null){
+            ptr2=ptr2.next;
+            ptr1=ptr1.next;
+        }
+        //ptr1 is on the kht element from the last
+        return ptr1.id;
+
     }
 
 
