@@ -17,8 +17,8 @@ public class SinglyLinkedListApp {
 
         mylist.printNodes();
 
-        System.out.println("the kth element is : " + mylist.getKthFromLast(3));
-        System.out.println(mylist.getKthItemFromLast(3));
+        System.out.println("the kth element is : " + mylist.getKthFromLast(1));
+        System.out.println(mylist.getKthItemFromLast(1));
 
     }
 }

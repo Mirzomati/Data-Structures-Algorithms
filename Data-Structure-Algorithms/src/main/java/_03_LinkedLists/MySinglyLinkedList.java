@@ -131,6 +131,7 @@ public class MySinglyLinkedList {
         }
         return -1;
     }
+
     //better solution
     public int getKthItemFromLast(int k){
         //create two pointers
