@@ -1,4 +1,4 @@
-package _02_CollectionReview;
+package dsa_02_CollectionReview;
 
 import java.util.Objects;
 

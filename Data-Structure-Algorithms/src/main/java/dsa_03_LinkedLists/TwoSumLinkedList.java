@@ -1,7 +1,6 @@
-package _03_LinkedLists;
+package dsa_03_LinkedLists;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class TwoSumLinkedList {
 

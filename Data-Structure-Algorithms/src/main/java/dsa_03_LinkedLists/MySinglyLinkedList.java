@@ -1,7 +1,4 @@
-package _03_LinkedLists;
-
-import java.util.IllegalFormatCodePointException;
-import java.util.LinkedList;
+package dsa_03_LinkedLists;
 
 public class MySinglyLinkedList {
 

@@ -1,4 +1,4 @@
-package _03_LinkedLists;
+package dsa_03_LinkedLists;
 
 public class Node {
     int id;

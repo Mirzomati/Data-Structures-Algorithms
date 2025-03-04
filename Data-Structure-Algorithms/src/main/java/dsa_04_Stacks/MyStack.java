@@ -1,4 +1,4 @@
-package _04_Stacks;
+package dsa_04_Stacks;
 
 import java.util.NoSuchElementException;
 

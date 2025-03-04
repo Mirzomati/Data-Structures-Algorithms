@@ -1,4 +1,4 @@
-package _01_ArraysAndAlgoAnalysis;
+package dsa_01_ArraysAndAlgoAnalysis;
 
 import java.util.Arrays;
 import java.util.HashMap;

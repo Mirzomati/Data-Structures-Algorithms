@@ -1,9 +1,9 @@
-package _04_Stacks;
+package dsa_04_Stacks;
 
 public class StackApp {
     public static void main(String[] args) {
         MyStack<Integer> stack = new MyStack<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 1; i++) {
             stack.push(i);
         }
 //        System.out.println(stack.peek());
